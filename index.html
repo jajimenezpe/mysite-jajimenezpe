@@ -57,7 +57,7 @@
 	
 </head>
 
-<body onload="iniciarMobile()">
+<body>
 	<div class="page">
 		
 		<!-- preloader -->
@@ -1131,10 +1131,10 @@
 		}
 
 		function iniciarMobile(){
-		  	//var header = document.getElementById("adaptativeHeader");
+		  	var header = document.getElementById("adaptativeHeader");
 		  
 		  	if(isMobile()){
-		  		$('adaptativeHeader').removeClass('myheader');
+		  		header.classList.remove("myheader");
 		  	}
 		}
 
