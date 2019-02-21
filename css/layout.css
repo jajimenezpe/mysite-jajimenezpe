@@ -50,6 +50,22 @@
 	z-index: 100 !important;
 }
 
+@media (max-width: 480px) {
+
+	.header .top-menu ul li a .link {
+		font-size: 9px !important;
+	}
+
+}
+
+@media (max-width: 375px) {
+
+	.header .top-menu ul li a .link {
+		font-size: 8px !important;
+	}
+
+}
+
 .header.active {
 	opacity: 1!important;
 	visibility: visible!important;
