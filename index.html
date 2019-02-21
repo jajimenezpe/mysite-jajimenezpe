@@ -8,7 +8,7 @@
 	<meta charset="UTF-8" />
 	<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
 	<title>Juan Antonio Jiménez</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="CV Juan Antonio Jiménez" />
 	<meta name="keywords" content="resposnive, resume, personal, card, cv, portfolio" />
 	<meta name="author" content="jajimenezpe" />
@@ -57,7 +57,7 @@
 	
 </head>
 
-<body>
+<body onload="iniciarMobile()">
 	<div class="page">
 		
 		<!-- preloader -->
@@ -83,7 +83,7 @@
 			<!--
 				Header
 			-->
-			<header class="myheader header">
+			<header id="adaptativeHeader" class="myheader header">
 
 				<!-- menu -->
 				<div class="top-menu">
@@ -1114,6 +1114,31 @@
 		Script envío de formulario con ajax
 	-->
 	<script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+
+	<script>
+		
+		window.onload=iniciarMobile(); 
+
+		function isMobile(){
+		    return (
+		        (navigator.userAgent.match(/Android/i)) ||
+		        (navigator.userAgent.match(/webOS/i)) ||
+		        (navigator.userAgent.match(/iPhone/i)) ||
+		        (navigator.userAgent.match(/iPod/i)) ||
+		        (navigator.userAgent.match(/iPad/i)) ||
+		        (navigator.userAgent.match(/BlackBerry/i))
+		    );
+		}
+
+		function iniciarMobile(){
+		  	//var header = document.getElementById("adaptativeHeader");
+		  
+		  	if(isMobile()){
+		  		$('adaptativeHeader').removeClass('myheader');
+		  	}
+		}
+
+	</script>
 	
 </body>
 </html>

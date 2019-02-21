@@ -22,8 +22,8 @@
 	position: absolute;
 	left: -125px;
 	top: 15px;
-	/*width: 72px;
-	z-index: 100;*/
+	width: 72px;
+	z-index: 100;
 	text-align: center;
 	opacity: 1;
 	visibility: visible;
